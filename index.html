@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 31</title>
+    <style>
+        body {
+            background: rgb(255, 247, 155);
+            background: linear-gradient(0deg, rgba(255, 247, 155, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+
+        h1 {
+            text-align: center;
+            color: #640404;
+        }
+
+        h2 {
+            text-align: center;
+            color: #640404;
+        }
+
+        .container {
+            display: flex;
+            margin-left: 400px;
+        }
+
+        #Product {
+            width: 500px;
+            height: 400px;
+            object-fit: cover;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 1px #6b666b;
+            margin: 90px auto;
+            display: block;
+        }
+
+        .product-Images-Container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-image {
+            height: 60px;
+            object-fit: cover;
+            border: 1px solid #640404;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Best Seller</h1>
+    <h2>US POLO White Sneakers</h2>
+    <div class="container">
+        <div class="product-Images-Container">
+            <img src="a.jpg" class="product-image" onclick="change('a.jpg')" />
+            <img src="b.jpg" class="product-image" onclick="change('b.jpg')" />
+            <img src="c.jpg" class="product-image" onclick="change('c.jpg')" />
+            <img src="d.jpg" class="product-image" onclick="change('d.jpg')" />
+            <img src="e.jpg" class="product-image" onclick="change('e.jpg')" />
+            <img src="f.jpg" class="product-image" onclick="change('f.jpg')" />
+            <img src="g.jpg" class="product-image" onclick="change('g.jpg')" />
+        </div>
+        <div class="product">
+            <img src="a.jpg" id="Product" />
+        </div>
+
+    </div>
+    <script>
+        function change(Name) {
+            const mainImg = document.getElementById('Product');
+            mainImg.src = Name;
+
+        }
+    </script>
+</body>
+
+</html>
